@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@next"></script>
+  <title>Ejemplo de declarative rending con Vue</title>
+</head>
+
+<body>
+  <!-- Template -->
+  <div id="app">
+    <!-- Aqui va vivir nuestra instancia Vue -->
+    <!-- <span>{{ message }}</span>  -->
+    <!-- <br>
+    <input v-model="message" type="text" /> -->
+    <a v-bind:href="enlace">Ir enlace</a>
+  </div>
+  <!-- /Template -->
+
+<!-- Instancia Vue -->
+  <script>
+    const { createApp } = Vue;
+
+    const app = createApp({
+      data() {
+        return {
+          enlace: "https://www.google.cl"
+        }
+      }
+    });
+
+    app.mount("#app");
+  </script>
+  <!-- / Instancia Vue -->
+</body>
+
+</html>
